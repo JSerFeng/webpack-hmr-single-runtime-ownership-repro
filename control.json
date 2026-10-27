@@ -1,0 +1,203 @@
+{
+  "webpack": "5.112.2",
+  "node": "v22.23.4",
+  "control": true,
+  "moved": {
+    "before": "d21dff07a3c374491391",
+    "after": "3176ce2fe8e24ed86c3f",
+    "updated": [
+      "./index.js"
+    ],
+    "status": "idle"
+  },
+  "edited": {
+    "before": "3176ce2fe8e24ed86c3f",
+    "after": "ac2d596cd4e40cf9acb1",
+    "updated": [
+      "./dep.js"
+    ],
+    "status": "idle"
+  },
+  "actual": 3,
+  "expected": 3,
+  "builds": [
+    {
+      "label": "initial",
+      "hash": "d21dff07a3c374491391",
+      "entries": {
+        "main": [
+          "shared.js",
+          "main.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "shared",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js",
+            "./keeper.js"
+          ]
+        }
+      ],
+      "manifests": {}
+    },
+    {
+      "label": "dep moves, shared stays",
+      "hash": "3176ce2fe8e24ed86c3f",
+      "entries": {
+        "main": [
+          "shared.js",
+          "main.js",
+          "main.d21dff07a3c374491391.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "moved",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js"
+          ]
+        },
+        {
+          "id": "shared",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./keeper.js"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.d21dff07a3c374491391.hot-update.json": {
+          "c": [
+            "main"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "label": "edit moved dep",
+      "hash": "ac2d596cd4e40cf9acb1",
+      "entries": {
+        "main": [
+          "shared.js",
+          "main.js",
+          "main.3176ce2fe8e24ed86c3f.hot-update.js"
+        ]
+      },
+      "chunks": [
+        {
+          "id": "main",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "./index.js"
+          ]
+        },
+        {
+          "id": "moved",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./dep.js"
+          ]
+        },
+        {
+          "id": "shared",
+          "runtime": [
+            "main"
+          ],
+          "modules": [
+            "./keeper.js"
+          ]
+        }
+      ],
+      "manifests": {
+        "main.3176ce2fe8e24ed86c3f.hot-update.json": {
+          "c": [
+            "main",
+            "moved"
+          ],
+          "r": [],
+          "m": [],
+          "css": {
+            "r": [
+              "main",
+              "moved"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

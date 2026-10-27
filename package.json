@@ -1,0 +1,16 @@
+{
+  "name": "webpack-hmr-single-runtime-ownership-repro",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A module loses future HMR updates while its old chunk stays in the same runtime",
+  "scripts": {
+    "test": "node reproduce.cjs",
+    "test:control": "node reproduce.cjs --control"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "webpack": "5.112.2"
+  }
+}
